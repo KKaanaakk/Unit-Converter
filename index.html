@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converters</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">Unit Converters</h1>
+      <div class="container">
+        <div class="tabs">
+          <button class="tab-link" onclick="openTab(event, 'temperature')">
+            Temperature
+          </button>
+          <button class="tab-link" onclick="openTab(event, 'weight')">
+            Weight
+          </button>
+          <button class="tab-link" onclick="openTab(event, 'length')">
+            Length
+          </button>
+        </div>
+
+        <div id="temperature" class="tab-content">
+          <h2 class="tab-title">Temperature Converter</h2>
+          <input
+            type="number"
+            id="tempInput"
+            placeholder="Enter Temperature"
+            class="input-form"
+          />
+          <div class="dropdown-container">
+            <select id="tempUnit" class="dropdown">
+              <option value="Celsius">Celsius</option>
+              <option value="Fahrenheit">Fahrenheit</option>
+              <option value="Kelvin">Kelvin</option>
+            </select>
+            <button onclick="convertTemperature()" class="btn">Convert</button>
+          </div>
+        </div>
+
+        <div id="weight" class="tab-content">
+          <h2 class="tab-title">Weight Converter</h2>
+          <input
+            type="number"
+            id="weightInput"
+            placeholder="Enter Weight"
+            class="input-form"
+          />
+          <div class="dropdown-container">
+            <select id="weightUnit" class="dropdown">
+              <option value="Kilograms">Kilograms</option>
+              <option value="Pounds">Pounds</option>
+              <option value="Ounces">Ounces</option>
+            </select>
+            <button onclick="convertWeight()" class="btn">Convert</button>
+          </div>
+        </div>
+
+        <div id="length" class="tab-content">
+          <h2 class="tab-title">Length Converter</h2>
+          <input
+            type="number"
+            id="lengthInput"
+            placeholder="Enter Length"
+            class="input-form"
+          />
+          <div class="dropdown-container">
+            <select id="lengthUnit" class="dropdown">
+              <option value="Meters">Meters</option>
+              <option value="Kilometers">Kilometers</option>
+              <option value="Miles">Miles</option>
+            </select>
+            <button onclick="convertLength()" class="btn">Convert</button>
+          </div>
+        </div>
+        <div class="result">
+          <div id="tempResult"></div>
+          <div id="weightResult"></div>
+          <div id="lengthResult"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
